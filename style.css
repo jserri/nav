@@ -1,0 +1,148 @@
+:root {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background-color:#21262a;
+}
+
+.containernav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 10px;
+    color: aliceblue;
+}
+
+.containernav > div > h2 > a {
+    color: white;
+}
+
+.containernav a {
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0 -10px;
+  }
+
+nav li {
+    margin: 0 10px;
+    list-style-type: none;
+}
+
+nav > ul > li > a {
+    color: lightgray;
+}
+
+#topnav > li > a:nth-last-child(2){
+    color: red;
+}
+
+.search {
+    margin-left: auto;   
+}
+
+.search > input {
+    padding: 11px;
+    border-radius: 5px;
+}
+
+.search button {
+    padding: 8px;
+    background-color: black;
+    color: green;
+    font-size: 17px;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+.search button:hover {
+    background-color: green;
+    color: white;
+}
+
+.nav-toggle {
+    display: none;
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+.hamburger {
+    display: block;
+    background: green;
+    width: 2.2em;
+    height: 3px;
+    position: relative;
+    border-radius: 2em;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #000;
+    width: 2.2em;
+    height: 3px;
+    border-radius: 2em;
+}
+/* Media */
+
+@media (max-width: 768px) {
+    #topnav {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+        padding: .5em;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        position: absolute;
+        right: 1rem;
+        top: 2rem;
+    }
+    
+    .hamburger {
+        display: block;
+        background: green;
+        width: 2.2em;
+        height: 3px;
+        position: relative;
+        border-radius: 2em;
+    }
+    
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        background: green;
+        width: 2.2em;
+        height: 3px;
+        border-radius: 2em;
+    }
+
+    .hamburger::before { 
+        top: 6px;
+     }
+    .hamburger::after { 
+        bottom: 6px; 
+    }
+}
